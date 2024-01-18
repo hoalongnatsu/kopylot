@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "kopylot"
-version = "0.0.4"
-description = "Your AI Powered Kubernetes Assistant"
-authors = ["Thiago Alves"]
-repository = "https://github.com/avsthiago/kopylot"
-documentation = "https://avsthiago.github.io/kopylot/"
+name = "kopylot-gpt"
+version = "0.0.3"
+description = "Your AI Powered Kubernetes Assistant from Thiago Alves with fix text-davinci-003"
+authors = ["hoalongnatsu"]
+repository = "https://github.com/hoalongnatsu/kopylot"
+documentation = "https://github.com/hoalongnatsu/kopylot"
 readme = "README.md"
 packages = [
   {include = "kopylot"}
