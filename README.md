@@ -51,14 +51,14 @@ pip install kopylot-gpt
 
 4. Run KoPylot:
 ```
-kopylot-gpt --help
+kopylot --help
 ```
 
 
 ## 📖 Usage:
 
 ```
-Usage: kopylot-gpt [OPTIONS] COMMAND [ARGS]...                                           
+Usage: kopylot [OPTIONS] COMMAND [ARGS]...                                           
                                                                                       
 ╭─ Options ──────────────────────────────────────────────────────────────────────────╮
 │ --version                                                                          │
@@ -74,7 +74,7 @@ Usage: kopylot-gpt [OPTIONS] COMMAND [ARGS]...
 ╰────────────────────────────────────────────────────────────────────────────────────╯
 ╭─ Commands ─────────────────────────────────────────────────────────────────────────╮
 │ audit     Audit a pod, deployment, or service using an LLM model.                  │
-│ chat      Start a chat with kopylot-gpt to generate kubectl commands based your        │
+│ chat      Start a chat with kopylot to generate kubectl commands based your        │
 │           inputs.                                                                  │
 │ ctl       A wrapper around kubectl. The arguments passed to the ctl subcommand are │
 │           interpreted by kubectl.                                                  │
