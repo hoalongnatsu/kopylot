@@ -10,6 +10,9 @@ KoPylot is an open-source AI-powered Kubernetes assistant. Its goal is to help d
 
 You can read more about the project in the [blog post](https://medium.com/@thiagoalves/introducing-kopylot-a-kubernetes-ai-assistant-264cff0e7846).
 
+## 🤝 Note: 
+This repo from https://github.com/avsthiago/kopylot with fixed text-davinci-003 has been deprecated. Origin author is Thiago Alves.
+
 ## 💫 Features:
 
 - 🔍 **Audit**: Audit a resource, such as pods, deployments, or services using an LLM model.
@@ -43,19 +46,19 @@ export KOPYLOT_AUTH_TOKEN=$(cat ../../../keys/openai)
 
 3. Install KoPylot using pip:
 ```
-pip install kopylot
+pip install kopylot-gpt
 ```
 
 4. Run KoPylot:
 ```
-kopylot --help
+kopylot-gpt --help
 ```
 
 
 ## 📖 Usage:
 
 ```
-Usage: kopylot [OPTIONS] COMMAND [ARGS]...                                           
+Usage: kopylot-gpt [OPTIONS] COMMAND [ARGS]...                                           
                                                                                       
 ╭─ Options ──────────────────────────────────────────────────────────────────────────╮
 │ --version                                                                          │
@@ -71,77 +74,10 @@ Usage: kopylot [OPTIONS] COMMAND [ARGS]...
 ╰────────────────────────────────────────────────────────────────────────────────────╯
 ╭─ Commands ─────────────────────────────────────────────────────────────────────────╮
 │ audit     Audit a pod, deployment, or service using an LLM model.                  │
-│ chat      Start a chat with kopylot to generate kubectl commands based your        │
+│ chat      Start a chat with kopylot-gpt to generate kubectl commands based your        │
 │           inputs.                                                                  │
 │ ctl       A wrapper around kubectl. The arguments passed to the ctl subcommand are │
 │           interpreted by kubectl.                                                  │
 │ diagnose  Diagnose a resource e.g. pod, deployment, or service using an LLM model. │
 ╰────────────────────────────────────────────────────────────────────────────────────╯
 ```
-
-
-## 🤝 Contributions: 
-KoPylot is an open-source project and we welcome contributions from the community. There are a couple of ways to set up your development environment and start contributing to the project.
-
-### 🐳 Using a Dev Container
-KoPylot supports development using a dev container, which helps you set up a consistent and isolated environment for development. This makes it easy to get started without having to worry about conflicting dependencies or configurations on your local machine.
-
-**To get started with a dev container:**
-
-1. Install [Docker](https://www.docker.com/) and [Visual Studio Code](https://code.visualstudio.com/).
-2. Install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in Visual Studio Code.
-3. Clone the KoPylot repository and open the project folder in Visual Studio Code.
-4. Press `F1`, type `Remote-Containers: Reopen in Container`, and hit `Enter`. Visual Studio Code will build the dev container and reopen the project inside it.
-
-You're now ready to start contributing to KoPylot using the dev container!
-
-### 🛠️ Local Setup
-
-If you prefer to set up your development environment locally, make sure you have [Poetry](https://python-poetry.org/) installed on your system. Then, follow these steps:
-
-1. Clone the KoPylot repository:
-
-   ```bash
-   git clone https://github.com/avsthiago/kopylot
-   ```
-
-2. Navigate to the project folder:
-
-   ```bash
-   cd kopylot
-   ```
-
-3. Install the project dependencies using Poetry:
-
-   ```go
-   make install
-   ```
-
-You're now ready to start contributing to KoPylot using your local setup! 😄
-
-Before submitting a pull request, please make sure to test your changes and follow the project's coding guidelines. We appreciate your contributions and look forward to collaborating with you! 🎉
-
-
-## 📄 License:
-
-KoPylot is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
-
-
-## ☎️ Contact: 
-
-If you have any questions or suggestions, feel free to contact me on [https://thiagoalves.ai](https://thiagoalves.ai/contact/).
-
-Thank you for using KoPylot! 🙌
-
-## 🗺️ Roadmap:
-
-- [x] Wrap the kubectl command using `ctl` subcommand.
-- [x] Create the `audit` subcommand to audit kubernetes resources.
-- [x] Create the `diagnose` subcommand to diagnose kubernetes resources.
-- [x] Create the `chat` subcommand to generate kubectl commands using from the user prompts.
-- [ ] Make it possible to use other LLM models, not just from OpenAI.
-- [ ] Integrate [LangChain](https://github.com/hwchase17/langchain) into KoPylot to make it as autonomous as possible.
-
-## ~ Similar Projects:
-
-One of the similar projects that I found is the [Kopilot](https://github.com/knight42/kopilot) from knight42. It is also a Kubernetes assistant which uses LLMs behind the scenes. The main difference from KoPylot is that it is written in Go. At the moment, it doesn't have the Chat command implemented, but it can respond in different languages.
